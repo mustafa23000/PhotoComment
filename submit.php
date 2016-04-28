@@ -9,7 +9,7 @@ if(isset($_POST["submit"]))
 
 
     $sql="SELECT email FROM users WHERE email='$email'";
-    $result=mysqli_query($db,$sql);
+    $result=mysql_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
     if(mysqli_num_rows($result) == 1)
     {
