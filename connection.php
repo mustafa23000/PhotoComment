@@ -1,8 +1,8 @@
 <?php
 define('DB_SERVER', 'eu-cdbr-azure-north-d.cloudapp.net');
-define('DB_USERNAME', 'b99256e599d9fc');
-define('DB_PASSWORD', '64c23a04');
-define('DB_DATABASE', 'rgutest');
+define('DB_USERNAME', 'b3f25fb0ccd0c4');
+define('DB_PASSWORD', '166c42c0');
+define('DB_DATABASE', 'mustafa2_23000');
 $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
 ?>

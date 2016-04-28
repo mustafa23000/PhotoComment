@@ -10,6 +10,7 @@ if(isset($_POST["submit"]))
     $photoID = $_POST["photoID"];
     $name = $_SESSION["username"];
 
+    //check database
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
