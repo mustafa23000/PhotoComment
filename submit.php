@@ -1,5 +1,4 @@
 <?php
-include ("connection.php");
 $msg = "";
 if(isset($_POST["submit"]))
 {
@@ -7,18 +6,7 @@ if(isset($_POST["submit"]))
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $name= mysqli_real_escape_string($name);
-    $name= stripslash($name);
-    $name= htmlspecialchars($name);
 
-    $password= mysqli_real_escape_string($password);
-    $password= stripslash($password);
-    $password= htmlspecialchars($password);
-    $password=md5($password);
-
-    $email= mysqli_real_escape_string($email);
-    $email= stripslash($email);
-    $email= htmlspecialchars($email);
 
     $sql="SELECT email FROM users WHERE email='$email'";
     $result=mysqli_query($db,$sql);

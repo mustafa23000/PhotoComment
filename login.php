@@ -14,14 +14,6 @@
 			$username=$_POST['username'];
 			$password=$_POST['password'];
 
-			$username= mysqli_real_escape_string($username);
-			$username= stripslash($username);
-			$username= htmlspecialchars($username);
-
-			$password= mysqli_real_escape_string($password);
-			$password= stripslash($password);
-			$password= htmlspecialchars($password);
-			$password=md5($password);
 
 			
 			//Check username and password from database
