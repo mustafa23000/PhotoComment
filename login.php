@@ -11,9 +11,13 @@
 		}else
 		{
 			// Define $username and $password
-			$username=$_POST['username'];
-			$password=$_POST['password'];
+			$username= stripcslashes($_POST['username']);
+			$username = mysqli_real_escape_string($db,$username);
+			$username = htmlspecialchars($username);
 
+			$password= stripcslashes($_POST['password']);
+			$password= mysqli_real_escape_string($db,$password);
+			$password= htmlspecialchars($password);
 
 			
 			//Check username and password from database
