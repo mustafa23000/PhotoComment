@@ -16,4 +16,25 @@ if(!isset($user_check))
 {
 header("Location: index.php");
 }
+
+if(isset($_SESSION[timein]))
+{
+    $timeout = time()-$_SESSION['timein'];
+
+    if($timeout >= 600)
+    {
+        session_unset();
+        session_destroy();
+        header("Location: index.php");
+    }
+    else
+    {
+        $_SESSION['timein'] = time();
+    }
+}
+else
+{
+    $_SESSION['timein'] = time();
+}
+
 ?>
