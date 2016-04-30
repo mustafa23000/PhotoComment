@@ -28,8 +28,7 @@ if(isset($_POST["submit"]))
     $uploadOk = 1;
 
 
-    if(($fileupload_ext =='jpg' || $fileupload_ext == 'jpeg' || $fileupload_ext == 'png') && ($filesize <100000) &&
-        ) {
+    if(($fileupload_ext =='jpg' || $fileupload_ext == 'jpeg' || $fileupload_ext == 'png') && ($filesize <100000) ) {
 
         $sql = "SELECT userID FROM users WHERE username='$name'";
         $result = mysqli_query($db, $sql);
