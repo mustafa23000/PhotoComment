@@ -21,13 +21,15 @@ if(isset($_POST["submit"]))
     $filesize = $_FILES['fileToUpload']['size'];
     $filetype = $_FILES['fileToUpload']['type'];
 
+    $fileupload = md5($fileupload);
+
 
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $target_file = $fileupload . basename($_FILES["fileToUpload"]["name"]);
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     $uploadOk = 1;
 
-    echo $fileupload_ext;
+    //echo $fileupload_ext;
     if(($fileupload_ext =='jpg' || $fileupload_ext == 'jpeg' || $fileupload_ext == 'png') && ($filesize <1000000) )
     {
 
