@@ -3,7 +3,7 @@ $resultText = "";
 if(isset($_POST["submit"]))
 {
     $name = stripcslashes($_POST["username"]);
-    $name = mysqli_real_escape_string($db,$name);
+    //$name = mysqli_real_escape_string($db,$name);
     $name = htmlspecialchars($name);
 
     $sql="SELECT userID FROM users WHERE username='$name'";
