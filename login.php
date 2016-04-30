@@ -18,6 +18,8 @@
 			$password= stripcslashes($_POST['password']);
 			$password= mysqli_real_escape_string($db,$password);
 			$password= htmlspecialchars($password);
+			$password = md5($password);
+			$password = md5($password);
 
 			
 			//Check username and password from database
