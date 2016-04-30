@@ -29,7 +29,7 @@
             <input type="submit" name="submit" value="Login" />
         </form>
         <div class="error"><?php echo $error;?></div>
-        <div class="register">You can register <a href="register.php"><h2>Here</h2>  </a> </div>
+        <div class="register">You can register <a href="register.php"><p2>Here</p2>  </a> </div>
     </div>
 
 </div>
