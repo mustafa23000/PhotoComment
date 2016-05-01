@@ -3,9 +3,9 @@ $resultText = "";
 if(isset($_POST["submit"]))
 {
     $name = ($_POST["username"]);
-    $name = stripcslashes($_POST["username"]);
-    $name = mysqli_real_escape_string($db,$name);
-    $name = htmlspecialchars($name);
+    //$name = stripcslashes($_POST["username"]);
+    //$name = mysqli_real_escape_string($db,$name);
+    //$name = htmlspecialchars($name);
 
     $sql="SELECT userID FROM users WHERE username='$name'";
     $result=mysqli_query($db,$sql);
