@@ -6,13 +6,13 @@ $msg = ""; //Variable for storing our errors.
 if(isset($_POST["submit"]))
 {
 
-    //$desc = $_POST["desc"];
-    $desc = stripcslashes($_POST['desc']);
+    $desc = $_POST["desc"];
+   // $desc = stripcslashes($_POST['desc']);
     $desc = mysqli_real_escape_string($db,$desc);
     $desc = htmlspecialchars($desc);
 
-    //$photoID = $_POST["photoID"];
-    $photoID = stripcslashes($_POST['photoID']);
+    $photoID = $_POST["photoID"];
+    //$photoID = stripcslashes($_POST['photoID']);
     $photoID = mysqli_real_escape_string($db,$photoID);
     $photoID = htmlspecialchars($photoID);
     $name = $_SESSION["username"];
