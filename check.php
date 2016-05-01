@@ -21,7 +21,7 @@ if(isset($_SESSION[timein]))
 {
     $timeout = time()-$_SESSION['timein'];
 
-    if($timeout >= 10)
+    if($timeout >= 60)
     {
         session_unset();
         session_destroy();
